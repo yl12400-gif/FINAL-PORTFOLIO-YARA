@@ -1,0 +1,24 @@
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: black; 
+            cursor: none;
+        }
+
+        .trail {
+            position: fixed;
+            width: 6px;
+            height: 6px;
+            border-radius: 0%;
+            pointer-events: none;
+            opacity: 0.9;
+            transform: translation(-50%,-50%);
+            animation: fadeOut 0.8s ease-out forwards;
+        }
+        
+        @keyframes fadeout {
+            to {
+                opacity: 0;
+                transform: translate(-50%,-50%)  scale(0.5);
+            }
+        }

@@ -1,0 +1,104 @@
+body {
+    margin:0;
+    padding: 0;
+    background: black;
+}
+.typewriter {
+    width: 40ch;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;         
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #f7e705;
+    text-align: center;        
+    animation: typing 2.5s steps(30) forwards infinite alternate-reverse;
+}
+
+@keyframes typing {
+    from {
+        width: 0ch;
+    }
+}
+
+.eye {
+    width: 500px;
+    height: 500px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-radius: 75% 0;
+    overflow: hidden; 
+
+}
+
+.eye:hover {
+    filter: blur(2px);
+    transition: filter 0.5s;
+}
+
+.ball {
+    width: 100px;
+    height: 100px;
+    background: #ffc549;
+    border-radius: 50%;
+    border: 120px solid #001a45;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+.shut {
+    width: 700px; 
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    z-index: 999;
+} 
+
+.shut span.lid {
+    display: block;
+    width: 100%; 
+    height: 18%;
+    background: black;
+    border-radius: 0 0 60% 60%;
+    transition: 0.4s all;
+
+}
+
+.shut span.click-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    color: white;
+    font-family: monospace;
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.eye:hover .click-text {
+    opacity: 1;
+    text-shadow:
+        0 0 10px orange,
+        0 0 20px orange,
+        0 0 40px rgb(247, 189, 82);
+
+}
+
+.eye:hover .lid{
+    height: 100%;
+} 
+
